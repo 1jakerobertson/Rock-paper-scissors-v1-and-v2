@@ -11,25 +11,26 @@ let computerScore = 0;
 
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
-    const computer = choices[Math.floor(Math.random() * 3)];
-    console.log(`CPU says: My choice is ${computer}!`);
-    return computer;
+    return choices[Math.floor(Math.random() * 3)];
 }
 
 function getPlayerChoice() {
     while (true) {
         let player = prompt('Please enter either rock, paper, or scissors: ').toLowerCase();
         if (['rock', 'paper', 'scissors'].includes(player)) {
-            console.log("Valid input!"); 
             return player;
         }
         console.log('Invalid input. Please enter either rock, paper, or scissors.');
     }
 }
 
-function playRound(computer, player) {
+function playRound() {
+    const computer = getComputerChoice();
+    const player = getPlayerChoice();
+    console.log(`CPU says: My choice is ${computer}!`);
+
     if (computer === player) {
-        console.log("Tie! Please play again!");
+        console.log('Tie! Please play again!');
         return;
     }
 
@@ -41,14 +42,28 @@ function playRound(computer, player) {
 
     if (winConditions[player] === computer) {
         playerScore++;
-        console.log(`Player wins! ${player} beats ${computer}!`);
+        console.log(`Player wins this round! ${player} beats ${computer}!`);
     } else {
         computerScore++;
-        console.log(`CPU wins! ${computer} beats ${player}!`);
+        console.log(`CPU wins this round! ${computer} beats ${player}!`);
+    }
+}
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
+
+    console.log(`Final Score - Player: ${playerScore}, CPU: ${computerScore}`);
+
+    if (playerScore > computerScore) {
+        console.log('Player wins the game! Congratulations!');
+    } else if (computerScore > playerScore) {
+        console.log('CPU wins the game! Better luck next time!');
+    } else {
+        console.log("It's a tie!");
     }
 }
 
 // Run the game
-const computerChoice = getComputerChoice();
-const playerChoice = getPlayerChoice();
-playRound(computerChoice, playerChoice);
+playGame();
