@@ -46,21 +46,25 @@ function playRound() {
     }
 }
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        playRound();
-    }
+// function playGame() {
+//     for (let i = 0; i < 5; i++) {
+//         playRound();
+//     }
 
-    console.log(`Final Score - Player: ${playerScore}, CPU: ${computerScore}`);
+//     console.log(`Final Score - Player: ${playerScore}, CPU: ${computerScore}`);
 
-    if (playerScore > computerScore) {
-        console.log('Player wins the game! Congratulations!');
-    } else if (computerScore > playerScore) {
-        console.log('CPU wins the game! Better luck next time!');
-    } else {
-        console.log("It's a tie!");
-    }
-}
+//     if (playerScore > computerScore) {
+//         console.log('Player wins the game! Congratulations!');
+//     } else if (computerScore > playerScore) {
+//         console.log('CPU wins the game! Better luck next time!');
+//     } else {
+//         console.log("It's a tie!");
+//     }
+// }
+
+
+// Play 1 round
+playRound();
 
 // Run the game
-playGame();
+// playGame();
