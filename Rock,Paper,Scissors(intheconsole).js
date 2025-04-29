@@ -69,7 +69,7 @@ playRound();
 // Run the game
 // playGame();
 
-function displayText(){
-    var text = document.getElementById("textField");
+function startRound(){
+    var text = document.getElementById('textfieldforroundstart');
     text.style.display = "block";
 }

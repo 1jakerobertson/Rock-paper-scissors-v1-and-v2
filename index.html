@@ -6,12 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-
-    <button onclick="displayText()">Click Me!</button>
+    <button onclick="startRound()">Start Round!</button>
     
-    <div id="textField" style="display: none;">
-  This is the text that appears when you click the button.</div>
+    <div id="textfieldforroundstart" style="display: none;">
+    Round started!
+    </div>
 
+    <div id="choices" style="display: none;">
+        <button onclick="makeChoice('rock')">Rock</button>
+        <button onclick="makeChoice('paper')">Paper</button>
+        <button onclick="makeChoice('scissors')">Scissors</button>
+    </div>
+
+    <div id="result"></div>
 
     <script src="Rock,Paper,Scissors(intheconsole).js"></script>
 </body>
