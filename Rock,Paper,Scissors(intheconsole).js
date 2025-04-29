@@ -68,3 +68,8 @@ playRound();
 
 // Run the game
 // playGame();
+
+function displayText(){
+    var text = document.getElementById("textField");
+    text.style.display = "block";
+}
