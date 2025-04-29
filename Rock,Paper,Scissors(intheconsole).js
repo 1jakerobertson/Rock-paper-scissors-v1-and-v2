@@ -70,6 +70,6 @@ playRound();
 // playGame();
 
 function startRound(){
-    var text = document.getElementById('textfieldforroundstart');
+    const text = document.getElementById('textfieldforroundstart');
     text.style.display = "block";
 }
