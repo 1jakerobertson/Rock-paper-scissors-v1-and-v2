@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissors</title>
+    <title>Rock, Paper, Scissors!</title>
 </head>
 <body>
-    <section class="game"
-        <button onclick="playRound()">Start Round!</button>
+    <section class="game">
         
-        <div id="textfieldforroundstart" style="display: none;">
-        Round started!
+        <!-- Title -->
+        <div class="title">Rock, Paper, Scissors!</div>
+
+        <!--Display Player and Computer Score-->
+        <div class="score">  
+            <div class="playerScore">
+                <h2>Player</h2>
+                <p class="p-count count">0</p>
+
+            </div>       
+            <div class="computerScore">
+                <h2>Computer</h2>
+                <p class="c-count count">0</p>
+            </div>
         </div>
 
-        <div id="choices" style="display: none;">
-            <button onclick="makeChoice('rock')">Rock</button>
-            <button onclick="makeChoice('paper')">Paper</button>
-            <button onclick="makeChoice('scissors')">Scissors</button>
+        <div class="move">Choose your move</div>
+
+        <!--Button choices-->
+        <div class="choices">
+            <button class="rock">Rock</button>
+            <button class="paper">Paper</button>
+            <button class="scissors">Scissors</button>
         </div>
 
+        <!--Final result of game -->
         <div id="result"></div>
     
     </section>
 
-    <script src="Rock,Paper,Scissors(intheconsole).js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
