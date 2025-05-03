@@ -22,6 +22,9 @@ function getPlayerChoice() {
 }
 
 function playRound() {
+    const text = document.getElementById('textfieldforroundstart');
+    text.style.display = "block";
+    
     const computer = getComputerChoice();
     const player = getPlayerChoice();
     console.log(`CPU says: My choice is ${computer}!`);
@@ -69,7 +72,7 @@ playRound();
 // Run the game
 // playGame();
 
-function startRound(){
-    const text = document.getElementById('textfieldforroundstart');
-    text.style.display = "block";
-}
+// function startRound(){
+//     const text = document.getElementById('textfieldforroundstart');
+//     text.style.display = "block";
+// }
