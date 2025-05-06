@@ -13,7 +13,19 @@ function playgame() {
     const scissorBtn = document.querySelector('.scissors');
     const playerChoices = [rockBtn, paperBtn, scissorBtn];
     const computerChoices = ['rock', 'paper', 'scissors'];
-}
+
+    playerChoices.forEach(button => {
+        button.addEventListener('click', () => {
+            const playerMove = button.className; // 'rock', 'paper', or 'scissors'
+            const computerMove = getComputerChoice();
+            playRound(playerMove, computerMove);
+        });
+    });
+};
+
+
+
+
 
 
 // Run the game
