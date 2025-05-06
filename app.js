@@ -6,8 +6,13 @@
 let playerScore = 0;
 let computerScore = 0;
 
+function getComputerChoice(){
+    const choices = ['rock', 'paper', 'scissors'];
+    return choices[Math.floor(Math.random() * 3)];
+}
 
-function playgame() {
+
+function playGame() {
     const rockBtn = document.querySelector('.rock');
     const paperBtn = document.querySelector('.paper');
     const scissorBtn = document.querySelector('.scissors');
@@ -23,6 +28,15 @@ function playgame() {
     });
 };
 
+function playRound(player, computer){
+    const playerChoiceText = document.querySelector('.player-choice-text');
+    const computerChoiceText = document.querySelector('.computer-choice-text');
+    
+    const resultDiv = document.getElementById('result');
+
+    playerChoiceText.textContent = 'Player chose ' + player + ".";
+    computerChoiceText.textContent = 'Computer chose ' + computer + ".";
+}
 
 
 
